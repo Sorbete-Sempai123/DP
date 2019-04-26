@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formulario/Javascript</title>
+	<script type="text/javascript">
+		function art(){
+			var form1=document.getElementById("form1").value;
+			var form2=document.getElementById("form2").value;
+			var email=document.getElementById("forme").value;
+			var rec_info=document.getElementById("check1").checked;
+			var condi=document.getElementById("check2").checked;
+
+			if(form1==""){
+				alert("Rellene el Nombre");}
+			else if(form2==""){
+				alert("Rellene sus Apellidos");}
+			else if(rec_info==false){
+				alert("Debe aceptar los ");}
+			else if(condi==false){
+				alert("condi");}
+			else if(email.indexOf("@")==-1){
+				alert("email");
+			}
+			else{
+				document.getElementById("formulario").submit();
+				alert(enviado);
+			}
+		}
+	</script>
+</head>
+<body>
+	<form action="ward.com" target="_blank" id="formulario">
+		<p>Nombre <input type="text" name="Nombre" id="form1" ></p>
+		<p>Apellidos <input type="text" name="Apellidos" id="form2"></p>
+		<p>Email <input type="text" name="Email" id="forme"></p>
+		<p>Deseo recibir información sobre novedades y ofertas <input type="Checkbox" name="informacion" id="check1"></p>
+		<p>Declaro haber leido y aceptar las condiciones<br>generales del programa y la normativa sobre protección de datos <input type="Checkbox" name="condiciones" id="check2"></p>
+		<p>Poblacion
+		<select>
+			<option value="Alicante">Alicante</option>
+			<option value="Madrid">Madrid</option>
+			<option value="Sevilla">Sevilla</option>
+			<option value="Valencia">Valencia</option>
+		</select></p>
+		<p><textarea rows="5"></textarea></p>
+		<p><input type="button" value="Enviar"name="Enviar" onclick="art()"></p>
+	</form>
+</body>
+</html>
